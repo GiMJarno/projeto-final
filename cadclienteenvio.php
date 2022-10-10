@@ -9,7 +9,8 @@
             require('conexao.php');
             $inserir="insert into cliente values('','$nome')";
             mysqli_query($db,$inserir) or die ('Não foi possivel cadastrar');
-            echo"<script> alert('Cadastro realizado com sucesso')<script>";
+            echo "<script>alert('Cadastro realizado com sucesso!');
+            window.location.href='cadcliente.php'</script>"
         ?>
     </body>
 </html>
