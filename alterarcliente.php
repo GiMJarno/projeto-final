@@ -22,7 +22,7 @@
     <form action="alterarclienteenvio.php" method="GET">
         <input name="id" type="hidden" value="<?php echo $row['id']?>">
         Cliente: <input type="text" name="cliente" value="<?php echo $row['nome']?>"><br><br>
-        <input type="submit" value="ALTERAR" name="btSalvar" onclick="locaton.href='relatorio_cliente.php';">
+        <input type="submit" value="ALTERAR" name="btSalvar" onclick="location.href='relatorio_cliente.php';">
         <input type="submit" value="EXCLUIR" name="btExcluir" 
         onclick="return confirm('Tem certeza que deseja excluir o cliente ' + '<?php echo $row['nome']?>' + '?')";>
         <input type="button" value="CANCELAR" name="btSair" onclick="location.href='cadcliente.php';">

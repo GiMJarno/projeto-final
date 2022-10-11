@@ -7,7 +7,7 @@
     <body>
         Cadastros de Clientes <br><br>
         <form action=cadclienteenvio.php method=POST>
-            Nome <input type=text name=nome> <br> <br>
+            Nome<input type=text name=nome> <br> <br>
         <?php
             require('conexao.php');
             $result=mysqli_query($db, "SELECT * FROM cliente");

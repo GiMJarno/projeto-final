@@ -6,15 +6,17 @@
     <body>
         <?php
             $modelo=$_POST['modelo'];
-            $armaz=$_POST['armazenamento'];
+            $armazenamento=$_POST['armazenamento'];
             $ram=$_POST['ram'];
-            $cpu=$_POST['cpu'];
-            $mb=$_POST['mb'];
+            $processador=$_POST['processador'];
+            $placamae=$_POST['placamae'];
             $cliente=$_POST['cliente'];
             require('conexao.php');
-            $inserir="insert into dispositivo values('', '$modelo', '$armaz','$ram','$cpu','$mb','$cliente')";
+            $inserir="insert into dispositivo values('', '$modelo', '$armazenamento',
+            '$ram','$processador','$placamae','$cliente')";
             mysqli_query($db,$inserir) or die ('Não foi possivel cadastrar');
-            echo"<script>alert('Cadastro realizado com sucesso')<script>";
+            echo "<script>alert('Cadastro realizado com sucesso!');
+            window.location.href='caddispositivo.php'</script>";;
         ?>
     </body>
 </html>

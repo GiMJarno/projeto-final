@@ -8,15 +8,15 @@
 <body>
     <?php
         $id=$_GET['id'];
-        $nome=$_GET['nome'];
+        $nome=$_GET['cliente'];
         require('conexao.php');
-        if($_GET['btExcluir'] == true){
-            $sqldrop="DELETE FROM cliente WHERE cliente.id=$id";
-            mysqli_query($db, $sqldrop) or die('Não foi possível excluir');
+        if(isset($_GET['btExcluir'])){
+            $sqldel="DELETE FROM cliente WHERE cliente.id=$id";
+            mysqli_query($db, $sqldel) or die('Não foi possível excluir');
             echo "<script>alert('Cadastro excluido com sucesso!');
             window.location.href='cadcliente.php'</script>";
         } else {
-            $sqlupdade="update cidade set nomecidade ='$nome' where idcidade='$id'";
+            $sqlupdade="update cliente set nome ='$nome' where id='$id'";
             mysqli_query($db, $sqlupdade) or die('Não foi possível alterar');
             echo "<script>alert('Cadastro alterado com sucesso!');
             window.location.href='cadcliente.php'</script>";
