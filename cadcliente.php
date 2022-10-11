@@ -1,4 +1,3 @@
-
 <!doctype HTML>
 <html lang="pt-br">
     <head>
@@ -8,7 +7,7 @@
     <body>
         Cadastros de Clientes <br><br>
         <form action=cadclienteenvio.php method=POST>
-            Nome <input type=text name=nome> <br> <br>
+            Nome<input type=text name=nome> <br> <br>
         <?php
             require('conexao.php');
             $result=mysqli_query($db, "SELECT * FROM cliente");
@@ -23,7 +22,7 @@
                     echo 
                     "<tr>
                         <td>".$row['id']."</td><td>".$row['nome']."</td>
-                        <td>"."<a href='alterardispositivo.php?id=".$row['id']."'>
+                        <td>"."<a href='alterarcliente.php?id=".$row['id']."'>
                         <img width='50%' src='icones/alterar.png'title='Alterar Cliente'></a>"."</td>
                     </tr>";
                     $linha++;
