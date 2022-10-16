@@ -2,25 +2,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>TechCompany</title>
-</head>
-<body>
-    <section>
+
+        <?php include "menu.php";?>
         <div class="circle"></div>
-        <header>
-            <a href="#"><img src="icones/logo removed.png" alt="" class="logo"></a>
-            <nav class="navegation">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="cadcliente.php">Cadastro Cliente</a></li>
-                    <li><a href="caddispositivo.php">Cadastro Disposivo</a></li>
-                    <li><a href="cadordemservico.php">Cadastro Ordem Serviço</a></li>   
-                </ul>
-            </nav>
-        </header>
         <div class="content">
             <div class="text">
                 <h2>Bem vindo a <br><span>TechCompany</span></h2>
@@ -35,6 +20,4 @@
         <div class="boxImg">
             <img src="icones/aa.png" alt="" class="img1"> 
         </div>
-    </section>
-</body>
-</html>
+    <?php include "rodape.php";?>

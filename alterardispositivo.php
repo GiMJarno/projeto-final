@@ -20,6 +20,8 @@
     $row=mysqli_fetch_assoc($result);
 ?>
 <body>
+    <?php include "menu.php";?>
+
     <form action="alterardispositivoenvio.php" method="GET">
         <input name="id" type="hidden" value="<?php echo $row['id']?>">
         Modelo: <input type="text" name="modelo" value="<?php echo $row['modelo']?>"><br><br>
