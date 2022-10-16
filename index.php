@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>TechCompany</title>
-
         <?php include "menu.php";?>
+
         <div class="circle"></div>
         <div class="content">
             <div class="text">
