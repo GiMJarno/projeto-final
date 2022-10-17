@@ -2,11 +2,8 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Clientes</title>
-    </head>
-    <body>
-        Cadastros de Ordem de Serviço <br><br>
+        <title>Ordens de Serviço</title>
+    <?php include "menu.php";?>
         <form action=cadordemservicoenvio.php method=POST>
         Cliente
         <select name=cliente>
@@ -63,7 +60,7 @@
                         <td>".$row['dispositivo']."</td>
                         <td>".$row['servico']."</td>
                         <td>".$row['descricao']."</td>
-                        <td>"."<a href='alterar_dispositivo.php?id=".$row['id']."'>
+                        <td>"."<a href='alterarordemserv.php?id=".$row['id']."'>
                         <img src='icones\alterar.png' title='Alterar Dispositivo'></a>"."</td>
                         </tr>";
                         $linha++;
@@ -72,5 +69,5 @@
                 mysqli_free_result($result);
             ?>
         </form>
-    </body>
-</html>
+        <a href="https://www.flaticon.com/free-icons/pencil" title="pencil icons">Pencil icons created by Freepik - Flaticon</a>
+    <?php include "rodape.php";?>

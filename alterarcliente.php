@@ -7,8 +7,8 @@
     <script type="text/javascript"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Alterar Cliente</title>
-</head>
 <?php
+    include "menu.php";
     $idcliente=$_GET['id'];
     require('conexao.php');
     $sql="select id, nome from cliente where id='$idcliente'";
@@ -18,7 +18,7 @@
     }
     $row=mysqli_fetch_assoc($result);
 ?>
-<body>
+
     <form action="alterarclienteenvio.php" method="GET">
         <input name="id" type="hidden" value="<?php echo $row['id']?>">
         Cliente: <input type="text" name="cliente" value="<?php echo $row['nome']?>"><br><br>

@@ -1,11 +1,9 @@
 <html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <meta charset="UTF-8">
         <title>Cadastro Dispositivo</title>
-    </head>
-    <body>
+    <?php include "menu.php";?>
         <form action="caddispositivoenvio.php" method="POST">
-            <br>
             Modelo: <input type="text" name="modelo"> <br><br>
             Tipo de Armazenamento 
             <select name=armazenamento>
@@ -77,5 +75,7 @@
             mysqli_free_result($result);
         ?>
         <a href="https://www.flaticon.com/free-icons/pencil" title="pencil icons">Pencil icons created by Freepik - Flaticon</a>
-    </body>
-</html>
+    <?php include "rodape.php";?>
+
+    <html>
+        </html>
