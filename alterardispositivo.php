@@ -22,7 +22,7 @@
 <body>
     <?php include "menu.php";?>
 
-    <form action="alterardispositivoenvio.php" method="GET">
+    <form style="color:white;" action="alterardispositivoenvio.php" method="GET">
         <input name="id" type="hidden" value="<?php echo $row['id']?>">
         Modelo: <input type="text" name="modelo" value="<?php echo $row['modelo']?>"><br><br>
         Armazenamento: <input type="text" name="armazenamento" value="<?php echo $row['armazenamento']?>"><br><br>

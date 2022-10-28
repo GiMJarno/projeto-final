@@ -19,7 +19,7 @@
     $row=mysqli_fetch_assoc($result);
 ?>
 
-    <form action="alterarclienteenvio.php" method="GET">
+    <form style="color:white;" action="alterarclienteenvio.php" method="GET">
         <input name="id" type="hidden" value="<?php echo $row['id']?>">
         Cliente: <input type="text" name="cliente" value="<?php echo $row['nome']?>"><br><br>
         <input type="submit" value="ALTERAR" name="btSalvar" onclick="location.href='relatorio_cliente.php';">

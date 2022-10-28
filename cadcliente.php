@@ -20,7 +20,8 @@
                 while($row = mysqli_fetch_assoc($result)) {
                     echo 
                     "<tr>
-                        <td>".$row['id']."</td><td>".$row['nome']."</td>
+                        <td>".$row['id']."</td>
+                        <td>".$row['nome']."</td>
                         <td>"."<a href='alterarcliente.php?id=".$row['id']."'>
                         <img src='icones\alterar.png' title='Alterar Dispositivo'></a>"."</td>
                     </tr>";
@@ -33,6 +34,8 @@
             <input type=submit value=CADASTRAR>
             <input type=reset value=LIMPAR>
         </form>
-        <a href="https://www.flaticon.com/free-icons/pencil" title="pencil icons">Pencil icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/pencil" title="pencil icons">
+            Pencil icons created by Freepik - Flaticon
+        </a>
     <?php include "rodape.php"?>
 

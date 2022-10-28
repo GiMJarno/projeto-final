@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Ordens de Serviço</title>
     <?php include "menu.php";?>
-        <form action=cadordemservicoenvio.php method=POST>
+        <form style="color:white;" action=cadordemservicoenvio.php method=POST>
         Cliente
         <select name=cliente>
             <?php
@@ -49,8 +49,12 @@
                     echo "NÃO FORAM ENCONTRADOS CADASTROS.";
                     exit;
                 }
-                    echo "<table border=1><tr><td width='25%'><strong>CODIGO</strong></td>
-                    <td width='50%' colspan=5><strong>DETALHES</strong></td></tr>";
+                    echo "<table border=1>
+                    <tr>
+                        <td><strong>CODIGO</strong></td>
+                        <td><strong>ID CLIENTE</strong></td>
+                        <td><strong>ID DISPOSITIVO</strong></td>
+                    </tr>";
                     $linha=1;
                     while($row = mysqli_fetch_assoc($result)) {
                         echo 
@@ -65,9 +69,12 @@
                         </tr>";
                         $linha++;
                     }
-                echo"</table>";
+                echo"</table><br><br>";
                 mysqli_free_result($result);
             ?>
         </form>
-        <a href="https://www.flaticon.com/free-icons/pencil" title="pencil icons">Pencil icons created by Freepik - Flaticon</a>
+        <div>
+            <a href="https://www.flaticon.com/free-icons/pencil" title="pencil icons">Pencil icons created by Freepik - Flaticon</a>
+        </div>
+        
     <?php include "rodape.php";?>

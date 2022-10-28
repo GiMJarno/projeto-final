@@ -3,7 +3,7 @@
         <meta charset="UTF-8">
         <title>Cadastro Dispositivo</title>
     <?php include "menu.php";?>
-        <form action="caddispositivoenvio.php" method="POST">
+        <form style="color:white; margin-top: 120px;" action="caddispositivoenvio.php" method="POST">
             Modelo: <input type="text" name="modelo"> <br><br>
             Tipo de Armazenamento 
             <select name=armazenamento>
@@ -48,6 +48,7 @@
             <br><br>
             <input type="submit" value="CADASTRAR">
             <input type="reset" value="LIMPAR">
+            <br><br>
 
             <?php
             require('conexao.php');
@@ -56,10 +57,10 @@
                 echo "NÃO FORAM ENCONTRADOS CADASTROS.";
                 exit;
             }
-                echo "<table width='20%' border='1px'><tr><td width='20%'><strong>CODIGO</strong></td>
-                <td width='50%'><strong>MODELO</strong></td><td width='20%'><strong>ARMAZENAMENTO</strong></td>
-                <td width='20%'><strong>RAM</strong></td><td width='20%'><strong>PROCESSADOR</strong></td>
-                <td width='20%'><strong>PLACA MÃE</strong></td><td width='20%'><strong>CLIENTE</strong></td></tr>";
+                echo "<table style='color:white;' border='1px'><tr><td><strong>CODIGO</strong></td>
+                <td><strong>MODELO</strong></td><td><strong>ARMAZENAMENTO</strong></td>
+                <td><strong>RAM</strong></td><td><strong>PROCESSADOR</strong></td>
+                <td><strong>PLACA MÃE</strong></td><td><strong>CLIENTE</strong></td></tr>";
                 $linha=1;
                 while($row = mysqli_fetch_assoc($result)) {
                     echo 
@@ -76,6 +77,3 @@
         ?>
         <a href="https://www.flaticon.com/free-icons/pencil" title="pencil icons">Pencil icons created by Freepik - Flaticon</a>
     <?php include "rodape.php";?>
-
-    <html>
-        </html>

@@ -13,6 +13,9 @@
 input { 
     color: black 
 }
+form {
+    color: white;
+}
 section{
     position: relative;
     width: auto;
@@ -143,4 +146,5 @@ header .navegation li a{
 
 .boxImg img{
     width: 700px;
+    filter: brightness(100);
 }
